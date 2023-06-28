@@ -1,0 +1,1 @@
+"# Resoluciones-algor-tmicas-python" 
