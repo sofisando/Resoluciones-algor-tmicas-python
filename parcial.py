@@ -23,7 +23,7 @@ def promedio(*args):
     return suma / longitud
 
 while True:
-    opcion = int(input('Elija una opción del siguiente menú\n2- Conocer si el numero ingresado es negativo, positivo o igual a 0\n3- Ingresar numeros, sumatoria y promedio\n4- Salir: '))
+    opcion = int(input('Elija una opción del siguiente menú\n2- Conocer si el numero ingresado es negativo, positivo o igual a 0\n3- Ingresar numeros, sumatoria y promedio\n4- Calcular la suma de los dígitos de un número\n5- Salir: '))
 
     if opcion == 2:
         while True:
@@ -42,11 +42,16 @@ while True:
                 break
             else:
                 lista.append(num) #funciona
-        
         print(f'La suma de los números ingresados es {suma(*lista)} y el promedio de los mismos es {promedio(*lista)}')
 
-
     elif opcion == 4:
+        numero = int(input('Ingrese un número: '))
+        numero_str = str(numero)
+        digitos =  *numero_str,
+        
+        print(f'Los dígitos del número ingresado son {digitos} y la sumatoria es: {suma(*digitos)}')
+
+    elif opcion == 5:
         #opcion para salir
         print('¡Espero tengas buen día, adios!')
         break
