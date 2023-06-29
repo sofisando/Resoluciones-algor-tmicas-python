@@ -23,9 +23,24 @@ def promedio(*args):
     return suma / longitud
 
 while True:
-    opcion = int(input('Elija una opción del siguiente menú\n2- Conocer si el numero ingresado es negativo, positivo o igual a 0\n3- Ingresar numeros, sumatoria y promedio\n4- Calcular la suma de los dígitos de un número\n5- Salir: '))
+    opcion = int(input('Elija una opción del siguiente menú\n1- Cuántas veces una letra\n2- Conocer si el numero ingresado es negativo, positivo o igual a 0\n3- Ingresar numeros, sumatoria y promedio\n4- Calcular la suma de los dígitos de un número\n5- Salir: '))
 
-    if opcion == 2:
+    if opcion == 1:
+        frase = input('Ingrese una frase: ')
+        letras = *frase, #Es una tupla
+        print(letras)
+        diccionario = {}
+
+        for letra in letras:
+            cant= frase.count(letra) #Cuantas veces se repite la letra en la frase
+            diccionario[letra]=cant
+            
+        print('Éstas son las letras y las veces que se repite: \n')
+        for claves, valor in diccionario.items():
+            print(f'{claves} : {valor}')
+        # print(diccionario.items())
+
+    elif opcion == 2:
         while True:
             num = input('Ingrese un número entero, si quiere salir ingrese "*": ')
             if num == '*':
